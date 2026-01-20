@@ -1554,30 +1554,6 @@ function reloadApp() {
 }
 
 
-// ---------------  CHECK IF THERE'S A NEW VERSION  ---------------
-
-function getNewApp() {
-  window.open("https://www.github.com/lucAmbr0/school-times", "_blank")
-}
-
-let deviceVersion;
-let latestVersion;
-checkVersion();
-function checkVersion() {
-  document.getElementById("blurOverlay").style.display = "block";
-  document.getElementById("newVersionBox").style.display = "block";
-  localStorage.setItem("version", latestVersion);
-  deviceVersion = localStorage.getItem("version");
-}
-
-function closeUpdateNotice() {
-  document.getElementById('blurOverlay').style.animation = 'settingContent 0.3s reverse';
-  document.getElementById('newVersionBox').style.animation = 'settingContent 0.3s reverse';
-  setTimeout(() => {
-    document.getElementById('blurOverlay').style.display = 'none';
-    document.getElementById('newVersionBox').style.display = 'none';
-  }, 300);
-}
 
 
 // ---------------  H1DD3N F34TUR3S  ---------------
